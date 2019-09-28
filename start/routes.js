@@ -24,5 +24,6 @@ Route.group(() => {
 }).middleware('auth')
 
 Route.group(() => {
-  Route.resource('invites', 'InviteController')
+  Route.post('invites', 'InviteController.store')
+  Route.resource('projects', 'ProjectController')
 }).middleware(['auth', 'team'])
